@@ -17,9 +17,7 @@ export const ItemContainer = styled.div`
   height: fit-content;
 `;
 
-export const Name = styled.span`
-  font-size: 1.1rem;
-`;
+export const Name = styled.a``;
 
 export const RepoDetailsContainer = styled.div`
   margin-top: 1.5rem;
@@ -49,5 +47,5 @@ export const DetailContainer = styled.span`
 export const LanguageColor = styled.span`
   ${StyledIcon}
   border-radius: 50%;
-  background-color: red;
+  ${props => (props.color ? `background-color: ${props.color}` : '')}
 `;

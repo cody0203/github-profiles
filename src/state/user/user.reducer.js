@@ -26,7 +26,10 @@ const userReducer = (state = INITIAL_STATE, action) => {
     case userActionTypes.FETCH_USER_FAILURE:
       return {
         ...state,
-        error: action.payload
+        error: action.payload,
+        user: null,
+        repos: null,
+        loading: false
       };
     default:
       return state;

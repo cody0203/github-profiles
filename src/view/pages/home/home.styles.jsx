@@ -9,3 +9,8 @@ export const UserContainer = styled.div`
     flex-direction: column;
   }
 `;
+
+export const ErrorMessage = styled.div`
+  text-align: center;
+  margin-top: 20px;
+`;

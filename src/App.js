@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 // pages
-import Home from './view/pages/home/home.page';
+import HomeContainer from './view/pages/home/home.container';
 
 // styles
 import { AppContainer, StyledH1 } from './app.styles';
@@ -13,7 +13,7 @@ const App = () => {
     <AppContainer>
       <StyledH1>Github Profiles</StyledH1>
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={HomeContainer} />
         <Route path="**">Not found</Route>
       </Switch>
       <GlobalLightStyle />

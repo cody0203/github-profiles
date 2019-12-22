@@ -15,7 +15,7 @@ const Search = ({ fetchUserStart }) => {
   };
 
   const onSearch = () => {
-    fetchUserStart(input);
+    if ((input !== '') & (input.trim() !== '')) fetchUserStart(input);
   };
 
   return (

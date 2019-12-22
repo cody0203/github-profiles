@@ -8,7 +8,6 @@ function* fetchUserStartAsync({ payload }) {
     const user = yield call(getUser, payload);
     const repos = yield call(getRepos, payload);
 
-    console.log(user, repos);
     yield put(fetchUserSuccess({ user, repos }));
   } catch (error) {
     yield put(fetchUserFailure(error.message));

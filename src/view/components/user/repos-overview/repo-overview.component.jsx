@@ -8,9 +8,11 @@ const UserReposOverView = ({ repos }) => {
   return (
     <Container>
       {repos
-        ? repos
-            .map(repo => <UserRepoItem key={repo.id} repo={repo} />)
-            .slice(0, 4)
+        ? repos.length > 0
+          ? repos
+              .map(repo => <UserRepoItem key={repo.id} repo={repo} />)
+              .slice(0, 4)
+          : 'Tài khoản này chưa có reposition nào'
         : ''}
     </Container>
   );

@@ -13,8 +13,12 @@ const UserProfile = ({ user }) => {
       {user ? (
         <AvatarAndUserName>
           <Avatar src={user['avatar_url']} alt="avatar" />
-          <UserName>
-            <span>{user.name}</span>
+          <UserName
+            href={user.html_url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {user.name || user.login}
           </UserName>
         </AvatarAndUserName>
       ) : (

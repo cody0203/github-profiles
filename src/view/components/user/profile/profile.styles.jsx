@@ -19,7 +19,7 @@ export const AvatarAndUserName = styled.div`
   box-shadow: 6px 6px #d5d4d6;
 `;
 
-export const UserName = styled.div`
+export const UserName = styled.a`
   font-size: 1.5rem;
   background-color: transparent;
   color: #7b7c70;

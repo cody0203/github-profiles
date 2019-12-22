@@ -12,7 +12,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [ ] Selected mode should persist when user comes back to the app again
 
 ### In Future:
-- [ ] Compare 2 or more users.
+- [ ] User can compare 2 or more profiles.
+- [ ] User can edit selected profiles for compare.
 
 ## Available Scripts
 

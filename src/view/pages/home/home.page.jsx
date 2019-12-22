@@ -1,8 +1,8 @@
 import React from 'react';
 
 import SearchContainer from '../../components/search/search.container';
-import UserProfile from '../../components/user/profile/profile.component';
-import UserRepoOverView from '../../components/user/repo-overview/repo-overview.component';
+import UserProfileContainer from '../../components/user/profile/profile.container';
+import UserReposOverViewContainer from '../../components/user/repos-overview/repo-overview.container';
 
 import { UserContainer } from './home.styles';
 
@@ -10,8 +10,8 @@ const Home = () => (
   <div>
     <SearchContainer />
     <UserContainer>
-      <UserProfile />
-      <UserRepoOverView />
+      <UserProfileContainer />
+      <UserReposOverViewContainer />
     </UserContainer>
   </div>
 );

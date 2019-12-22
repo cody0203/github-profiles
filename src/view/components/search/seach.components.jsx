@@ -15,13 +15,20 @@ const Search = ({ fetchUserStart }) => {
   };
 
   const onSearch = () => {
-    console.log(input);
     fetchUserStart(input);
   };
 
   return (
     <StyledContainer>
-      <StyledInput value={input} onChange={handleInputChange} />
+      <StyledInput
+        value={input}
+        onChange={handleInputChange}
+        onKeyDown={e => {
+          if (e.keyCode === 13) {
+            onSearch();
+          }
+        }}
+      />
       <IconContainer onClick={onSearch}>
         <Icon />
       </IconContainer>

@@ -5,10 +5,11 @@ import { getUser, getRepos } from '../../utils/api';
 
 function* fetchUserStartAsync({ payload }) {
   try {
-    const data = yield call(getUser, payload);
+    const user = yield call(getUser, payload);
     const repos = yield call(getRepos, payload);
 
-    yield put(fetchUserSuccess(data, repos));
+    console.log(user, repos);
+    yield put(fetchUserSuccess({ user, repos }));
   } catch (error) {
     yield put(fetchUserFailure(error.message));
   }

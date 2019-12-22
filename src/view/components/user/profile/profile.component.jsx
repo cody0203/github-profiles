@@ -7,15 +7,21 @@ import {
   UserName
 } from './profile.styles';
 
-const UserProfile = () => (
-  <Container>
-    <AvatarAndUserName>
-      <Avatar src="https://loremflickr.com/300/300" alt="avatar" />
-      <UserName>
-        <span>Cody</span>
-      </UserName>
-    </AvatarAndUserName>
-  </Container>
-);
+const UserProfile = ({ user }) => {
+  return (
+    <Container>
+      {user ? (
+        <AvatarAndUserName>
+          <Avatar src={user['avatar_url']} alt="avatar" />
+          <UserName>
+            <span>{user.name}</span>
+          </UserName>
+        </AvatarAndUserName>
+      ) : (
+        ''
+      )}
+    </Container>
+  );
+};
 
 export default UserProfile;

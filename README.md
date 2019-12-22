@@ -1,5 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## User Stories
+
+- For Now:
+- [ ] User can enter a username
+- [ ] User can click on search button to retrieve information
+- [ ] User can see the avatar, username, followers and repository count of searched user
+- [ ] User can see the top 4 repositories of searched user
+- [ ] User should get an alert if the username is not valid
+- [ ] User can toggle dark/light mode
+- [ ] Selected mode should persist when user comes back to the app again
+
 ## Available Scripts
 
 In the project directory, you can run:

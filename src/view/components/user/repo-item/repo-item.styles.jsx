@@ -1,0 +1,53 @@
+import styled, { css } from 'styled-components';
+import { ReactComponent as Star } from '../../../../assets/star.svg';
+import { ReactComponent as Fork } from '../../../../assets/fork.svg';
+
+const StyledIcon = css`
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.3rem;
+`;
+
+export const ItemContainer = styled.div`
+  border: 5px solid #7b7c70;
+  box-shadow: 6px 6px #d5d4d6;
+  display: flex;
+  flex-flow: column;
+  padding: 1rem;
+  height: fit-content;
+`;
+
+export const Name = styled.span`
+  font-size: 1.1rem;
+`;
+
+export const RepoDetailsContainer = styled.div`
+  margin-top: 1.5rem;
+  display: flex;
+  > span {
+    margin-right: 1rem;
+  }
+`;
+
+export const StyledStar = styled(Star)`
+  ${StyledIcon}
+`;
+
+export const StyledFork = styled(Fork)`
+  ${StyledIcon}
+`;
+
+export const DetailContainer = styled.span`
+  display: flex;
+  align-items: center;
+
+  > span {
+    font-size: 1.1rem;
+  }
+`;
+
+export const LanguageColor = styled.span`
+  ${StyledIcon}
+  border-radius: 50%;
+  background-color: red;
+`;

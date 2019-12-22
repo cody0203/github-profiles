@@ -11,6 +11,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [ ] User can toggle dark/light mode
 - [ ] Selected mode should persist when user comes back to the app again
 
+### In Future:
+- [ ] Compare 2 or more users.
+
 ## Available Scripts
 
 In the project directory, you can run:

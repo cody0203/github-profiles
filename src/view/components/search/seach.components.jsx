@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   StyledInput,
@@ -7,13 +7,26 @@ import {
   IconContainer
 } from './search.styles';
 
-const Search = () => (
-  <StyledContainer>
-    <StyledInput />
-    <IconContainer>
-      <Icon />
-    </IconContainer>
-  </StyledContainer>
-);
+const Search = ({ fetchUserStart }) => {
+  const [input, setInput] = useState('');
+
+  const handleInputChange = e => {
+    setInput(e.target.value);
+  };
+
+  const onSearch = () => {
+    console.log(input);
+    fetchUserStart(input);
+  };
+
+  return (
+    <StyledContainer>
+      <StyledInput value={input} onChange={handleInputChange} />
+      <IconContainer onClick={onSearch}>
+        <Icon />
+      </IconContainer>
+    </StyledContainer>
+  );
+};
 
 export default Search;

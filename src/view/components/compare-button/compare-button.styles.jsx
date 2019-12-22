@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ThemeIconContainer = styled.div`
+export const CompareIconContainer = styled.div`
   width: 60px;
   padding: 5px;
   margin: auto;

@@ -15,16 +15,19 @@ export const Avatar = styled.img`
 export const AvatarAndUserName = styled.div`
   display: flex;
   flex-flow: column;
-  border: 5px solid #7b7c70;
-  box-shadow: 6px 6px #d5d4d6;
+  border: 5px solid ${props => props.theme.secondary};
+  box-shadow: 6px 6px ${props => props.theme.shadow};
 `;
 
 export const UserName = styled.a`
   font-size: 1.5rem;
-  background-color: transparent;
-  color: #7b7c70;
+  background-color: ${props => props.theme.primary};
+  ${props => {
+    console.log(props);
+  }}
+  color: ${props => props.theme.secondary};
   padding: 10px;
-  border-top: 5px solid #7b7c70;
+  border-top: 5px solid ${props => props.theme.secondary};
   text-align: center;
   font-weight: 900;
 `;

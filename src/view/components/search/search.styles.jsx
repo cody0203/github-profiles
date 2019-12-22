@@ -4,20 +4,19 @@ import { ReactComponent as SearchIcon } from '../../../assets/search.svg';
 export const StyledContainer = styled.div`
   display: flex;
   justify-content: center;
-  box-shadow: 6px 6px #d5d4d6;
+  box-shadow: 6px 6px ${props => props.theme.shadow};
   width: 60%;
-  margin: auto;
 `;
 
 export const StyledInput = styled.input`
-  border: 4px solid #7b7c70;
-  border-right: 2px solid #7b7c70;
+  border: 4px solid ${props => props.theme.secondary};
+  border-right: 2px solid ${props => props.theme.secondary};
   padding: 0.5rem;
   outline: none;
   font-size: 1.5rem;
   width: 100%;
-  background-color: #f5f4f0;
-  color: #7b7c70;
+  background-color: ${props => props.theme.primary};
+  color: ${props => props.theme.secondary};
   text-transform: uppercase;
   font-weight: 900;
 `;
@@ -25,13 +24,13 @@ export const StyledInput = styled.input`
 export const Icon = styled(SearchIcon)`
   width: 30px;
   height: 30px;
-  fill: #7b7c70;
-  opacity: 0.7;
+  fill: ${props => props.theme.secondary};
+  opacity: 1;
 `;
 
 export const IconContainer = styled.div`
-  border: 4px solid #7b7c70;
-  border-left: 2px solid #7b7c70;
+  border: 4px solid ${props => props.theme.secondary};
+  border-left: 2px solid ${props => props.theme.secondary};
   width: 60px;
   cursor: pointer;
 
@@ -41,13 +40,9 @@ export const IconContainer = styled.div`
 
   background: repeating-linear-gradient(
     -45deg,
-    #d1d0cd,
-    #d1d0cd 1px,
-    #f5f4f0 1px,
-    #f5f4f0 9px
+    ${props => props.theme.shadow},
+    ${props => props.theme.shadow} 1px,
+    ${props => props.theme.primary} 1px,
+    ${props => props.theme.primary} 9px
   );
-
-  :hover ${Icon} {
-    opacity: 1;
-  }
 `;

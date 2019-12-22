@@ -12,17 +12,17 @@ export const GlobalLightStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    background-color: #f5f4f0;
-    color: #9a9a90;
+    background-color: ${props => props.theme.primary};
+    color: ${props => props.theme.secondary};
   }
 
   a {
     font-size: 1.1rem;
-    color: inherit;
+    color: ${props => props.theme.lightTextColor};
     text-decoration: none;
 
     :hover {
-      color: #7b7c70;
+      color: ${props => props.theme.secondary};
     }
   }
 `;

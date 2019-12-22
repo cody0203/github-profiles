@@ -14,3 +14,10 @@ export const ErrorMessage = styled.div`
   text-align: center;
   margin-top: 20px;
 `;
+
+export const ActionContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  padding: 0 15px;
+`;

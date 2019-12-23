@@ -1,16 +1,22 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { ReactComponent as DarkIcon } from '../../../assets/moon.svg';
 import { ReactComponent as LightIcon } from '../../../assets/sunny.svg';
 
 import { ThemeIconContainer } from './theme-button.styles';
+import { changeTheme } from '../../../state/setting/setting.actions';
 
-const ThemeButton = ({ theme, changeTheme }) => {
+const ThemeButton = () => {
+  const dispatch = useDispatch();
+
+  const theme = useSelector(({ setting }) => setting.theme);
+
   const handleChangeTheme = () => {
     if (theme === 'dark') {
-      changeTheme('light');
+      dispatch(changeTheme('light'));
     } else {
-      changeTheme('dark');
+      dispatch(changeTheme('dark'));
     }
   };
 

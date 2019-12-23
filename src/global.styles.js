@@ -12,17 +12,17 @@ export const GlobalLightStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    background-color: ${props => props.theme.primary};
-    color: ${props => props.theme.secondary};
+    background-color: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.secondary};
   }
 
   a {
     font-size: 1.1rem;
-    color: ${props => props.theme.lightTextColor};
+    color: ${({ theme }) => theme.lightTextColor};
     text-decoration: none;
 
     :hover {
-      color: ${props => props.theme.secondary};
+      color: ${({ theme }) => theme.secondary};
     }
   }
 `;

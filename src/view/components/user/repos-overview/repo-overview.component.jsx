@@ -1,10 +1,13 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import UserRepoItem from '../repo-item/repo-item.component';
 
 import { Container } from './repo-overview.styles';
 
-const UserReposOverView = ({ repos }) => {
+const UserReposOverView = () => {
+  const repos = useSelector(({ userData }) => userData.repos);
+
   return (
     <Container>
       {repos

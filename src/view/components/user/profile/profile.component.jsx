@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import {
   Avatar,
@@ -7,7 +8,9 @@ import {
   UserName
 } from './profile.styles';
 
-const UserProfile = ({ user }) => {
+const UserProfile = () => {
+  const user = useSelector(({ userData }) => userData.user);
+
   return (
     <Container>
       {user ? (

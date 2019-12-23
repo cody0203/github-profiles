@@ -9,8 +9,8 @@ const StyledIcon = css`
 `;
 
 export const ItemContainer = styled.div`
-  border: 5px solid ${props => props.theme.secondary};
-  box-shadow: 6px 6px ${props => props.theme.shadow};
+  border: 5px solid ${( { theme } ) =>theme.secondary};
+  box-shadow: 6px 6px ${( { theme } ) =>theme.shadow};
   display: flex;
   flex-flow: column;
   padding: 1rem;

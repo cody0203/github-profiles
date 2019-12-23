@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { fetchUserStart } from '../../../state/user/user.actions';
+
+import { useDispatch } from 'react-redux';
 
 import {
   StyledInput,
@@ -7,7 +10,9 @@ import {
   IconContainer
 } from './search.styles';
 
-const Search = ({ fetchUserStart }) => {
+const Search = () => {
+  const dispatch = useDispatch();
+
   const [input, setInput] = useState('');
 
   const handleInputChange = e => {
@@ -15,7 +20,7 @@ const Search = ({ fetchUserStart }) => {
   };
 
   const onSearch = () => {
-    if ((input !== '') & (input.trim() !== '')) fetchUserStart(input);
+    if ((input !== '') & (input.trim() !== '')) dispatch(fetchUserStart(input));
   };
 
   return (

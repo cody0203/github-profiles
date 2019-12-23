@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppContainer from './app.container';
+import App from './app';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import { store, persistor } from './state/store';
@@ -11,7 +11,7 @@ ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <PersistGate persistor={persistor}>
-        <AppContainer />
+        <App />
       </PersistGate>
     </BrowserRouter>
   </Provider>,

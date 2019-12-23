@@ -1,20 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
-import SearchContainer from '../../components/search/search.container';
-import UserProfileContainer from '../../components/user/profile/profile.container';
-import UserReposOverViewContainer from '../../components/user/repos-overview/repo-overview.container';
-import ThemeButtonContainer from '../../components/theme-button/theme-button.container';
+import Search from '../../components/search/seach.component';
+import UserProfile from '../../components/user/profile/profile.component';
+import UserReposOverView from '../../components/user/repos-overview/repo-overview.component';
+import ThemeButton from '../../components/theme-button/theme-button.component';
 import CompareButton from '../../components/compare-button/compare-button.component';
 
 import { UserContainer, ErrorMessage, ActionContainer } from './home.styles';
 
-const Home = ({ error }) => {
+const Home = () => {
+  const error = useSelector(({ userData }) => userData.error);
+
+  useEffect(() => {
+    console.log('a');
+  }, []);
+
   return (
     <div>
       <ActionContainer>
         <CompareButton />
-        <SearchContainer />
-        <ThemeButtonContainer />
+        <Search />
+        <ThemeButton />
       </ActionContainer>
       {error ? (
         <ErrorMessage>
@@ -22,8 +29,8 @@ const Home = ({ error }) => {
         </ErrorMessage>
       ) : (
         <UserContainer>
-          <UserProfileContainer />
-          <UserReposOverViewContainer />
+          <UserProfile />
+          <UserReposOverView />
         </UserContainer>
       )}
     </div>

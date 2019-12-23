@@ -4,7 +4,7 @@ export const ThemeIconContainer = styled.div`
   width: 60px;
   padding: 5px;
   margin: auto;
-  border: 4px solid ${props => props.theme.secondary};
-  box-shadow: 6px 6px ${props => props.theme.shadow};
+  border: 4px solid ${({ theme }) => theme.secondary};
+  box-shadow: 6px 6px ${({ theme }) => theme.shadow};
   cursor: pointer;
 `;

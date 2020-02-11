@@ -18,25 +18,25 @@ const UserRepoItem = ({ repo }) => {
   const languageDetails = colors[language];
   return (
     <ItemContainer>
-      <Name href={html_url} target="_blank" rel="noopener noreferrer">
-        {name}
-      </Name>
-      <RepoDetailsContainer>
-        {language ? (
+      <a href={html_url} target="_blank" rel="noopener noreferrer">
+        <Name>{name}</Name>
+        <RepoDetailsContainer>
+          {language ? (
+            <DetailContainer>
+              <LanguageColor color={languageDetails.color} />
+              <span>{language}</span>
+            </DetailContainer>
+          ) : (
+            ''
+          )}
           <DetailContainer>
-            <LanguageColor color={languageDetails.color} />
-            <span>{language}</span>
+            <StyledStar /> <span>{stargazers_count}</span>
           </DetailContainer>
-        ) : (
-          ''
-        )}
-        <DetailContainer>
-          <StyledStar /> <span>{stargazers_count}</span>
-        </DetailContainer>
-        <DetailContainer>
-          <StyledFork /> <span>{forks}</span>
-        </DetailContainer>
-      </RepoDetailsContainer>
+          <DetailContainer>
+            <StyledFork /> <span>{forks}</span>
+          </DetailContainer>
+        </RepoDetailsContainer>
+      </a>
     </ItemContainer>
   );
 };
